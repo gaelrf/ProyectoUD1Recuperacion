@@ -5,12 +5,56 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.proyectoud1recuperacion.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
+    <HBox prefHeight="28.0" prefWidth="403.0" spacing="10">
+        <children>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+            <Label fx:id="welcomeText" prefHeight="17.0" prefWidth="100.0" text="Search books by: "/>
+            <ComboBox fx:id="parametroBusqueda" prefWidth="150.0"/>
+            <TextField fx:id="busqueda"/>
+            <Button onAction="#mostrarTabla" text="Buscar"/>
+        </children>
+    </HBox>
+    <TableView fx:id="tabla" prefHeight="500" prefWidth="1000">
+        <columns>
+            <TableColumn fx:id="titulo" prefWidth="150" text="Titulo">
+                <cellValueFactory>
+                    <PropertyValueFactory property="position"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="autor" prefWidth="364" text="Conductor">
+                <cellValueFactory>
+                    <PropertyValueFactory property="driver"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="equipo" prefWidth="225" text="Equipo">
+                <cellValueFactory>
+                    <PropertyValueFactory property="constructors"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="isbn" prefWidth="150" text="Puntos">
+                <cellValueFactory>
+                    <PropertyValueFactory property="points"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox prefHeight="100.0" prefWidth="200.0" spacing="10">
+        <Label prefHeight="17.0" prefWidth="300.0" text="Introduzca el nombre del fichero al que exportar: "/>
+        <TextField fx:id="nombreFichero" text="libros"/>
+        <Button fx:id="json" onAction="#exportarJSON" text="Json"/>
+        <Button fx:id="xml" onAction="#exportarXML" text="XML"/>
+        <Button fx:id="texto" onAction="#exportarTexto" text="Texto"/>
+        <Button fx:id="binario" onAction="#exportarBinario" text="Binario"/>
+    </HBox>
 </VBox>
