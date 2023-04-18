@@ -29,22 +29,17 @@
         <columns>
             <TableColumn fx:id="titulo" prefWidth="150" text="Titulo">
                 <cellValueFactory>
-                    <PropertyValueFactory property="position"/>
+                    <PropertyValueFactory property="title"/>
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn fx:id="autor" prefWidth="364" text="Conductor">
+            <TableColumn fx:id="autor" prefWidth="364" text="Autor">
                 <cellValueFactory>
-                    <PropertyValueFactory property="driver"/>
+                    <PropertyValueFactory property="authorName"/>
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn fx:id="equipo" prefWidth="225" text="Equipo">
+            <TableColumn fx:id="publicacion" prefWidth="225" text="Fecha de Publicación">
                 <cellValueFactory>
-                    <PropertyValueFactory property="constructors"/>
-                </cellValueFactory>
-            </TableColumn>
-            <TableColumn fx:id="isbn" prefWidth="150" text="Puntos">
-                <cellValueFactory>
-                    <PropertyValueFactory property="points"/>
+                    <PropertyValueFactory property="firstPublishYear"/>
                 </cellValueFactory>
             </TableColumn>
         </columns>

@@ -16,4 +16,8 @@ module com.example.proyectoud1recuperacion {
 
     opens com.example.proyectoud1recuperacion to javafx.fxml;
     exports com.example.proyectoud1recuperacion;
+
+    opens com.example.proyectoud1recuperacion.model;
+    exports com.example.proyectoud1recuperacion.model;
+
 }

@@ -28,10 +28,7 @@ public class HelloController implements Initializable {
     private TableColumn autor;
     @FXML
 
-    private TableColumn equipo;
-    @FXML
-
-    private TableColumn isbn;
+    private TableColumn publicacion;
 
     @FXML
     private ComboBox parametroBusqueda;
@@ -48,7 +45,7 @@ public class HelloController implements Initializable {
     @FXML
     protected void mostrarTabla() throws MalformedURLException {
         String busquedaFormateada = busqueda.getText();
-        busquedaFormateada.replace(" ","+");
+        busquedaFormateada = busquedaFormateada.replace(" ","+");
         //Borramos posibles datos ya añadidos a la tabla
         tabla.getItems().clear();
         //Clasificaciones de la API cambiando unicamente el año de la temporada
