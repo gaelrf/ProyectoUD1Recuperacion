@@ -68,6 +68,7 @@ public class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //Incluimos los años al ComboBox
         parametroBusqueda.setItems(FXCollections.observableArrayList("author","title"));
+        parametroBusqueda.setValue("title");
 
     }
 

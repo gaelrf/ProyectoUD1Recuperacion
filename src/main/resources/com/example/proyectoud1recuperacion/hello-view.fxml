@@ -27,17 +27,17 @@
     </HBox>
     <TableView fx:id="tabla" prefHeight="500" prefWidth="1000">
         <columns>
-            <TableColumn fx:id="titulo" prefWidth="150" text="Titulo">
+            <TableColumn fx:id="titulo" prefWidth="250" text="Titulo">
                 <cellValueFactory>
                     <PropertyValueFactory property="title"/>
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn fx:id="autor" prefWidth="364" text="Autor">
+            <TableColumn fx:id="autor" prefWidth="450" text="Autor">
                 <cellValueFactory>
                     <PropertyValueFactory property="authorName"/>
                 </cellValueFactory>
             </TableColumn>
-            <TableColumn fx:id="publicacion" prefWidth="225" text="Fecha de Publicación">
+            <TableColumn fx:id="publicacion" prefWidth="300" text="Fecha de Publicación">
                 <cellValueFactory>
                     <PropertyValueFactory property="firstPublishYear"/>
                 </cellValueFactory>
